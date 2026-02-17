@@ -1,13 +1,27 @@
+Route Tables Configuration
+
 Public Route Table:
+- Name: public-rt
 - Route Table ID: rtb-0cb497eb7d9b15b59
-- Associated Subnets: subnet-0632710934e5bd830, subnet-05be88f5e1929a5ca
-- Routes:
-  10.0.0.0/16 -> local
-  0.0.0.0/0 -> igw-028167387697eeda6
+
+Routes:
+- Destination: 10.0.0.0/16
+  Target: local
+- Destination: 0.0.0.0/0
+  Target: Internet Gateway (igw-028167387697eeda6)
+
+Associated Subnets:
+- subnet-0632710934e5bd830 (public-subnet-1a)
+- subnet-05be88f5e1929a5ca (public-subnet-1b)
 
 Private Route Table:
+- Name: private-rt
 - Route Table ID: rtb-0b5ab819f7624658f
-- Associated Subnets: subnet-08ed990ae03b08cca, subnet-0cf02428d5f360f7f
-- Routes:
-  10.0.0.0/16 -> local
 
+Routes:
+- Destination: 10.0.0.0/16
+  Target: local
+
+Associated Subnets:
+- subnet-08ed990ae03b08cca (private-subnet-1a)
+- subnet-0cf02428d5f360f7f (private-subnet-1b)

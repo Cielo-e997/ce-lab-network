@@ -1,4 +1,13 @@
+VPC Configuration
+
 VPC Name: bootcamp-vpc
 VPC ID: vpc-000824cba1612c960
 CIDR Block: 10.0.0.0/16
-DNS Hostnames: enabled
+Region: eu-central-1
+
+DNS Hostnames: Enabled
+Tenancy: Default
+
+Internet Gateway:
+- Name: bootcamp-igw
+- Attached: Yes
