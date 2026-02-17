@@ -1,0 +1,21 @@
+Public Subnets:
+- Name: public-subnet-1a
+  Subnet ID: subnet-0632710934e5bd830
+  CIDR: 10.0.1.0/24
+  AZ: eu-central-1a
+
+- Name: public-subnet-1b
+  Subnet ID: subnet-05be88f5e1929a5ca
+  CIDR: 10.0.2.0/24
+  AZ: eu-central-1b
+
+Private Subnets:
+- Name: private-subnet-1a
+  Subnet ID: subnet-08ed990ae03b08cca
+  CIDR: 10.0.11.0/24
+  AZ: eu-central-1a
+
+- Name: private-subnet-1b
+  Subnet ID: subnet-0cf02428d5f360f7f
+  CIDR: 10.0.12.0/24
+  AZ: eu-central-1b
