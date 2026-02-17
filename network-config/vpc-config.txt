@@ -1,13 +1,41 @@
-VPC Configuration
+VPC Configuration – CE Network Lab
 
-VPC Name: bootcamp-vpc
-VPC ID: vpc-000824cba1612c960
-CIDR Block: 10.0.0.0/16
-Region: eu-central-1
-
-DNS Hostnames: Enabled
-Tenancy: Default
+VPC:
+- Name: bootcamp-vpc
+- VPC ID: vpc-000824cba1612c960
+- CIDR: 10.0.0.0/16
+- Region: eu-central-1
 
 Internet Gateway:
 - Name: bootcamp-igw
-- Attached: Yes
+- IGW ID: igw-028167387697eeda6
+- Attached to VPC: bootcamp-vpc
+
+Public Subnets:
+- subnet-0632710934e5bd830
+  CIDR: 10.0.1.0/24
+  AZ: eu-central-1a
+
+- subnet-05be88f5e1929a5ca
+  CIDR: 10.0.2.0/24
+  AZ: eu-central-1b
+
+Private Subnets:
+- subnet-08ed990ae03b08cca
+  CIDR: 10.0.11.0/24
+  AZ: eu-central-1a
+
+- subnet-0cf02428d5f360f7f
+  CIDR: 10.0.12.0/24
+  AZ: eu-central-1b
+
+Route Tables:
+- Public RT: rtb-0cb497eb7d9b15b59
+  Route: 0.0.0.0/0 → Internet Gateway
+
+- Private RT: rtb-0b5ab819f7624658f
+  Routes: local only
+
+Associations:
+- Public RT → public subnets
+- Private RT → private subnets
